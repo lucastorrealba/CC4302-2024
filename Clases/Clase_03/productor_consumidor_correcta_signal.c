@@ -47,7 +47,7 @@ void put(Buffer *buf, Item *item){
 }
 
 void *consumidor(void *ptr){
-    Buffer *buf = ptr;
+    Buffer *buf = (Buffer *) ptr;
     for(;;){
         Item *cuadro = get(buf);
         if (cuadro == NULL)

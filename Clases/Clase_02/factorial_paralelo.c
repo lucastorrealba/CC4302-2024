@@ -19,7 +19,7 @@ double factorial(int n){
 }
 
 void *mult_thread(void *ptr){
-    Args *a1 = ptr;
+    Args *a1 = (Args *) ptr;
     a1->res = mult(a1->i, a1->j);
     return NULL;
 }

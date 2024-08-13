@@ -26,7 +26,7 @@ void mult(Matriz a, Matriz b, Matriz c, int n, int ini, int fin){
 }
 
 void *mult_thread(void *ptr){
-    Args *arg = ptr;
+    Args *arg = (Args *) ptr;
     mult(arg->a, arg->b, arg->c, arg->n, arg->ini, arg->fin);
     return NULL;
 }
